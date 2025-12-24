@@ -1,0 +1,2730 @@
+{
+  "info": {
+    "_postman_id": "93fce18f-21c9-4ee0-b7d0-dfbc4130b58d",
+    "name": "Zurumi_Exchange",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1) Authentication Module",
+      "item": [
+        {
+          "name": "Login",
+          "id": "4da95bef-40db-4427-b049-31d70f6be986",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"dimkha516@gmail.com\",\r\n    \"password\": \"Azerty1@\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{local_base_url}}/login",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Register",
+          "id": "67fb79b7-2fa1-4787-b3c9-c068e51fd8ac",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/register",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reset Password",
+          "id": "53451bf0-9c5f-44be-8c6e-0a9271a78640",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/resetpassword",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "resetpassword"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Change Reset Password",
+          "id": "c9a69979-55c8-4828-b71d-e638ea96bcca",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/changeresetpassword",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "changeresetpassword"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Biometric Login",
+          "id": "1217c0c3-b5b6-4920-bb57-989a3c5b7f6b",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/biologin",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "biologin"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Enable Biometric",
+          "id": "15335dd9-608f-448e-99b0-117760c6b761",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/enablebiometric",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "enablebiometric"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Refresh Token",
+          "id": "2f754897-aab3-4d37-8306-c91608e90706",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/refresh",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "refresh"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reconfirm Account",
+          "id": "cdb9ecf6-c0e6-4d79-be63-c464e9ad4d95",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/reconfirm-account",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "reconfirm-account"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Logout",
+          "id": "68f3781f-671c-4904-86ac-44b1695560b3",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/logout",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "cb5ed051-cf06-4bd9-9397-fc99ab104927"
+    },
+    {
+      "name": "2) Public/General Routes",
+      "item": [
+        {
+          "name": "GET - Country List",
+          "id": "8f662dff-42dd-43a6-a116-4d6c99529634",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/country",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "country"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET - OS Version",
+          "id": "c89c92f4-29e2-4dfc-89d9-6a19dcb650d9",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/osversion",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "osversion"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ANY - Market Data",
+          "id": "74417afd-350b-4678-87cf-c393bd21466d",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/market",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "market"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Authenticated User",
+          "id": "50b62b05-2977-4001-8167-6cbf53c85e83",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/user",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "user"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "6dbb3d8b-0210-4eb6-b682-6431f90dee3c"
+    },
+    {
+      "name": "3) User Management Module",
+      "item": [
+        {
+          "name": "Deactivate Account (Alternative)",
+          "id": "9659c2e2-1f8e-49ea-af85-617d4a2a2b35",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"dimkha516@gmail.com\",\r\n    \"password\": \"Azerty1@\"\r\n}"
+            },
+            "url": {
+              "raw": "{{local_base_url}}/deactivateAccount",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "deactivateAccount"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Change Password",
+          "id": "ab258127-1810-45d8-a96d-b54c28431d5f",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"dimkha516@gmail.com\",\r\n    \"password\": \"Azerty1@\"\r\n}"
+            },
+            "url": {
+              "raw": "{{local_base_url}}/change-password",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "change-password"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Deactivate Account",
+          "id": "8bf33a89-450c-47bf-bdca-a105875d585d",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"dimkha516@gmail.com\",\r\n    \"password\": \"Azerty1@\"\r\n}"
+            },
+            "url": {
+              "raw": "{{local_base_url}}/deactivateaccount",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "deactivateaccount"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Enable Two-Factor Authentication",
+          "id": "322317ab-c3b0-4df8-85aa-f03d7244d764",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"dimkha516@gmail.com\",\r\n    \"password\": \"Azerty1@\"\r\n}"
+            },
+            "url": {
+              "raw": "{{local_base_url}}/enable-twofa",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "enable-twofa"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Disable Two-Factor Authentication",
+          "id": "0849b183-ecd5-4577-9014-eee69365fe01",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"dimkha516@gmail.com\",\r\n    \"password\": \"Azerty1@\"\r\n}"
+            },
+            "url": {
+              "raw": "{{local_base_url}}/disable-twofa",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "disable-twofa"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Validate OTP",
+          "id": "e987a8b1-9484-420a-9939-0e7312e2bb17",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"dimkha516@gmail.com\",\r\n    \"password\": \"Azerty1@\"\r\n}"
+            },
+            "url": {
+              "raw": "{{local_base_url}}/validate-otp",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "validate-otp"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Resend Email",
+          "id": "59b6fd9b-b106-487d-b1fb-6659d548f646",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"dimkha516@gmail.com\",\r\n    \"password\": \"Azerty1@\"\r\n}"
+            },
+            "url": {
+              "raw": "{{local_base_url}}/resend-email",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "resend-email"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Send OTP",
+          "id": "8ab5e93d-f3b3-4aa0-adc0-e88ed1d3afab",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"dimkha516@gmail.com\",\r\n    \"password\": \"Azerty1@\"\r\n}"
+            },
+            "url": {
+              "raw": "{{local_base_url}}/send-otp",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "send-otp"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Verify OTP",
+          "id": "fa75a278-b5ec-4084-b979-ab9acd3c62fe",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"dimkha516@gmail.com\",\r\n    \"password\": \"Azerty1@\"\r\n}"
+            },
+            "url": {
+              "raw": "{{local_base_url}}/verify-otp",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "verify-otp"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "User Details",
+          "id": "55b1c6bd-9270-49a3-aa11-a43a2c2ff7ae",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"dimkha516@gmail.com\",\r\n    \"password\": \"Azerty1@\"\r\n}"
+            },
+            "url": {
+              "raw": "{{local_base_url}}/userdetails",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "userdetails"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update User Details",
+          "id": "682fa22f-e03a-48dd-a516-151dc2ad9a99",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"dimkha516@gmail.com\",\r\n    \"password\": \"Azerty1@\"\r\n}"
+            },
+            "url": {
+              "raw": "{{local_base_url}}/userdetails-update",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "userdetails-update"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "b2972ec1-5802-4a22-a788-4ceb5dac785a"
+    },
+    {
+      "name": "4) KYC (Know Your Customer) Module",
+      "item": [
+        {
+          "name": "Add KYC",
+          "id": "076cb90a-f97c-4ce7-b491-7cc8ba02f9cb",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/add-kyc",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "add-kyc"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update KYC",
+          "id": "35709620-43e6-47e2-95c1-48780f8eac49",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/update-kyc",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "update-kyc"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Upload Front ID",
+          "id": "03a91b46-5223-4928-a92f-b923e2b7322e",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/front-upload",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "front-upload"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Upload Back ID",
+          "id": "3795b047-5a6a-48e6-9417-7ba6ab40c2d5",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/back-upload",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "back-upload"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Upload Proof of Address",
+          "id": "0fef4787-d97e-4ff3-9054-90de57510cd0",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/proof-upload",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "proof-upload"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Upload Profile Image",
+          "id": "36fa67fe-f6e8-4580-bce4-2fced9a5d358",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/profile-upload",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "profile-upload"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "c09a03f5-400a-4c7d-8ed9-e799ce042e1e"
+    },
+    {
+      "name": "5) Bank Management Module",
+      "item": [
+        {
+          "name": "Add Bank",
+          "id": "0f0b4f7e-411b-4da3-bfac-d029220b6f4c",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/add-bank",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "add-bank"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Bank",
+          "id": "92cfed78-fa82-4552-9a0c-9998188bc90d",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/update-bank",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "update-bank"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Bank",
+          "id": "ddd6b8da-db10-460b-ac8e-f8286d68f2bb",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/delete-bank",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "delete-bank"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "List Bank",
+          "id": "4f6566c1-7538-447d-ab10-eebd9021fb4b",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/list-bank",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "list-bank"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "47da1c80-e722-423d-9503-e3e8f301a83b"
+    },
+    {
+      "name": "6) Wallet Management Module",
+      "item": [
+        {
+          "name": "Admin Bank (Fiat Deposit)",
+          "id": "fc8e7d65-6d0e-44ba-b816-4375ebe64fa6",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/adminBank",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "adminBank"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Fiat Deposit",
+          "id": "cdf9ba59-d8ca-48fe-85cc-15521925f31d",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/fiatdeposit",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "fiatdeposit"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Crypto Withdraw (Validate)",
+          "id": "fe0e3cab-4987-4d3b-aec7-d4bc76d7f608",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/withdraw",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "withdraw"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Withdraw OTP",
+          "id": "3258288d-0c8c-418c-ba76-94b46b411a9a",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/withdrawotp",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "withdrawotp"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Generate Deposit Address",
+          "id": "49432cc3-2661-46fa-b318-0c767330ef00",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/wallet/generate-address",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "wallet",
+                "generate-address"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "cb511b1a-fdb9-46ab-ba2e-968171e07e27"
+    },
+    {
+      "name": "7) Trading Module",
+      "item": [
+        {
+          "name": "Get List Assets",
+          "id": "0abae6cd-bdcf-440b-b9bb-d715a3bc65a8",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{local_base_url}}/getlistassets",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "getlistassets"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Assets List",
+          "id": "d054c382-a89c-4ee3-bf23-ac95b690430f",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{local_base_url}}/assets",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "assets"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Asset Details",
+          "id": "5a5d7695-cc49-48b4-abf3-dcf681b34075",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{local_base_url}}/assetsdetails",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "assetsdetails"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Trade Pair List",
+          "id": "29f40fd4-c35b-4474-a366-f97f9d35c5f1",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{local_base_url}}/tradepairlist",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "tradepairlist"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Trade",
+          "id": "c963118e-627a-4b88-8d58-24916eca0be5",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{local_base_url}}/trade",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "trade"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Post Trade",
+          "id": "4183d35d-7d8b-4c73-a3a4-ea8e8c5afaad",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{local_base_url}}/posttrade",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "posttrade"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Open Orders",
+          "id": "fa5b2165-447d-48db-ac6f-a8bba6a4142f",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{local_base_url}}/openorders",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "openorders"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Cancel Order",
+          "id": "38c8e5d0-369c-416e-9a46-78138252ce78",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{local_base_url}}/cancelorder",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "cancelorder"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "0bb775fd-a193-4598-a131-bb1621401a6a"
+    },
+    {
+      "name": "8) Limit Trading Module",
+      "item": [
+        {
+          "name": "Buy Limit Trade",
+          "id": "243fbbe6-395d-4fe8-a4e4-249047022ba7",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{local_base_url}}/buylimittrade",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "buylimittrade"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Sell Limit Trade",
+          "id": "3cc0673f-9f1e-4f48-959d-26077b8e1481",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{local_base_url}}/selllimittrade",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "selllimittrade"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "633dbc1e-cd53-4ffa-a61f-a3a7240869cb"
+    },
+    {
+      "name": "9) Market Trading Module",
+      "item": [
+        {
+          "name": "Buy Market",
+          "id": "09fda31d-d5f4-4cd1-9d6b-7ed21c714c34",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{local_base_url}}/trade/buymarket",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "trade",
+                "buymarket"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Sell Market",
+          "id": "46635487-4baf-4acf-b863-fbb874fe658a",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{local_base_url}}/trade/sellmarket",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "trade",
+                "sellmarket"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "8a1cdaae-9046-4745-8ca9-aa032721dd4f"
+    },
+    {
+      "name": "10) History Module",
+      "item": [
+        {
+          "name": "Trade History",
+          "id": "63fa6444-373e-4522-ab9e-63d5e45a9380",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{local_base_url}}/tradehistory",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "tradehistory"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Withdraw History",
+          "id": "ac9bb0f5-9586-40f0-9736-1a1a343ed822",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/withdrawhistory",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "withdrawhistory"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Deposit History",
+          "id": "bb1a4701-a803-413c-b80f-a357752c7364",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/deposithistory ",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "deposithistory "
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Deposit List",
+          "id": "bd2a7b2f-be6a-4835-95d8-9529c05e96af",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/depositlist ",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "depositlist "
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Withdraw List",
+          "id": "8ed2a813-bebc-46ca-a365-898d5fb9c1d8",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/withdrawlist ",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "withdrawlist "
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "93043dc0-67e5-40e3-ab16-16a6dd5c36aa"
+    },
+    {
+      "name": "11) Support Ticket Module",
+      "item": [
+        {
+          "name": "View Support Tickets",
+          "id": "575a0196-ff37-4861-b8a9-df778e4d8a14",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/ticket-view",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "ticket-view"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Ticket",
+          "id": "e1a29882-da30-47d7-b061-ffe3e4298260",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/create-ticket",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "create-ticket"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Messages",
+          "id": "d7ce6d8c-49c3-499d-affd-37553bfc980d",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/get-message",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "get-message"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Send Message",
+          "id": "8f27cf25-c189-4c4d-ae80-74448e9c698e",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/send-message",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "send-message"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "c5af7e68-89bb-4895-91c6-a40ef880dd59"
+    },
+    {
+      "name": "12) Live Chat Module",
+      "item": [
+        {
+          "name": "Get Chat Messages",
+          "id": "fa3f133b-90ef-4ca7-a3c7-a21f4ba3a438",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/live-chat/{chatId}/messages",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "live-chat",
+                "{chatId}",
+                "messages"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Admin Status",
+          "id": "8d41a2d7-77f7-4b84-8478-5492a6ad3ff9",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/live-chat/admin-status",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "live-chat",
+                "admin-status"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Chat by Session",
+          "id": "24f6fe0d-7d60-464d-90d2-2c49ad60df84",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/live-chat/session/{sessionId}",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "live-chat",
+                "session",
+                "{sessionId}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Start Chat",
+          "id": "035cd9f8-6e96-46af-81b9-1f98d0e124f3",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/live-chat/start",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "live-chat",
+                "start"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Send Chat Message",
+          "id": "00e57347-1f37-4831-8693-c5e7e548b980",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/live-chat/{chatId}/send-message",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "live-chat",
+                "{chatId}",
+                "send-message"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "End Chat",
+          "id": "136e370c-042a-435f-9903-4bbedde6d37b",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/live-chat/{chatId}/end",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "live-chat",
+                "{chatId}",
+                "end"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Request Agent",
+          "id": "7593892e-2ca0-4e16-96f1-19b80e658cbe",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/live-chat/{chatId}/request-agent",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "live-chat",
+                "{chatId}",
+                "request-agent"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Ticket from Chat",
+          "id": "3cb59e2c-53eb-4819-aff1-6d1ea6152f1d",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/live-chat/{chatId}/create-ticket",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "live-chat",
+                "{chatId}",
+                "create-ticket"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "6c4d1e48-5f56-406b-8ade-052db728e039"
+    },
+    {
+      "name": "13) Launchpad/IEO Module",
+      "item": [
+        {
+          "name": "View Launchpad",
+          "id": "2427621a-fe03-4697-bfed-fb856558e951",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/launchpad",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "launchpad"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Token Sale",
+          "id": "05f5d444-ac86-487d-9924-71884c5cc39e",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/tokensale",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "tokensale"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Buy Token",
+          "id": "a6f69e05-baf3-4e38-be27-7eb7a5750dc2",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/buytoken",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "buytoken"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Apply for Launchpad",
+          "id": "1da55db7-5ef9-43ad-b295-b4e6d1c7370a",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/applylaunchpad",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "applylaunchpad"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Buy IEO",
+          "id": "3350fc06-8807-4623-b250-a1f9ebe39727",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/buyieo",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "buyieo"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "2a97644c-01c3-4899-83cc-bc668e9ab998"
+    },
+    {
+      "name": "14) Swap Module (Old)",
+      "item": [
+        {
+          "name": "Swap List",
+          "id": "bbc740f7-e742-47f4-88d4-f297c6e5df16",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/swaplist",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "swaplist"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Swap Submit",
+          "id": "24b38282-b443-4b13-afd9-3add998c449e",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/swapsubmit",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "swapsubmit"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Swap History",
+          "id": "a10e6e1b-92a9-4e06-b2a9-010aeb993a11",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/swap-history",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "swap-history"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "5e497ab1-e166-4bcb-91df-5ca0b293a8b6"
+    },
+    {
+      "name": "15) Instant Buy/Sell Module (New)",
+      "item": [
+        {
+          "name": "Buy Crypto List",
+          "id": "9741a4c7-5c14-4282-a80f-6a66809232a0",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/buycrypto-list",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "buycrypto-list"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "List Coin (Pair List)",
+          "id": "2edf738f-274c-4bc9-87ea-a5978000fae8",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/listcoin",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "listcoin"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Balance",
+          "id": "6d4a393e-0d24-453c-b3fb-b1e2e710aae2",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/getbalance",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "getbalance"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Instant Submit",
+          "id": "e012f8a4-ee9a-4660-a80d-5deedd4e7378",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/instantsubmit",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "instantsubmit"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Buy Crypto History",
+          "id": "ce05e36c-6d5f-43c9-ae6a-34491ddc0d80",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/buycrypto-history",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "buycrypto-history"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "18123720-7701-4dca-8c02-210d1dd6d2f2"
+    },
+    {
+      "name": "16) Staking Module",
+      "item": [
+        {
+          "name": "Stake List",
+          "id": "a565b311-b075-45b1-8983-3783634596b0",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/stakelist",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "stakelist"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Earnings",
+          "id": "f5bed56a-d496-4466-95de-40537ecb9575",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/earnings",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "earnings"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Earning History",
+          "id": "8fe2a657-1d2b-4fb9-9f2b-9aeb04ebb93a",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/earninghistory",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "earninghistory"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Stack Submit (Create Stake)",
+          "id": "4b9fb2ea-1f93-45e2-9d6d-eb2bfbd9e1dc",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/stacksubmit",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "stacksubmit"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Stake Withdraw",
+          "id": "808bc7f9-805e-47f1-bbde-f620f775de5f",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/stakewithdraw",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "stakewithdraw"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Referral Info",
+          "id": "df7f35ba-a39f-4c06-ac1f-1c6bfb715caf",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/referralinfo",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "referralinfo"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "My Stake",
+          "id": "a9a1bdd2-4564-4164-9c25-8068f64ac6c2",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/mystake",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "mystake"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "86add7c6-fade-4f94-9951-236af6c63513"
+    },
+    {
+      "name": "17) Payment Gateway Module",
+      "item": [
+        {
+          "name": "IPN (Webhook)",
+          "id": "b4674783-1b3d-4042-96c8-2742bb329612",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/ipn/{id?}",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "ipn",
+                "{id"
+              ],
+              "query": [
+                {
+                  "key": "}",
+                  "value": null
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Cancel Payment",
+          "id": "dde7527e-6bdb-4bea-87c6-22a9d4cb7295",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/cancel-payment/{id?}",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "cancel-payment",
+                "{id"
+              ],
+              "query": [
+                {
+                  "key": "}",
+                  "value": null
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Success Payment",
+          "id": "9d4c85d8-f3ea-477f-88a1-de4e69e79c22",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/success-payment/{id?}",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "success-payment",
+                "{id"
+              ],
+              "query": [
+                {
+                  "key": "}",
+                  "value": null
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Payment Request",
+          "id": "225fe9a4-54d6-4181-87df-f8a28010850f",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{local_base_url}}/paymentRequest",
+              "host": [
+                "{{local_base_url}}"
+              ],
+              "path": [
+                "paymentRequest"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "90de4241-7b3d-437a-98df-e42d4d0e6bc1"
+    }
+  ]
+}
