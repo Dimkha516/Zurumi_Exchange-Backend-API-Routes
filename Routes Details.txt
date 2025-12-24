@@ -1,0 +1,745 @@
+📁 1. Authentication Module
+1.1 POST - Login
+Endpoint: POST /login
+Rate Limit: 5 req/min
+Request Body:
+
+{
+  "email": "user@example.com",
+  "password": "password123"
+}
+1.2 POST - Register
+Endpoint: POST /register
+Rate Limit: 5 req/min
+Request Body:
+
+{
+  "first_name": "John",
+  "last_name": "Doe",
+  "email": "user@example.com",
+  "password": "password123",
+  "password_confirmation": "password123",
+  "country": "US",
+  "phone": "+1234567890",
+  "referral_code": ""
+}
+1.3 POST - Reset Password
+Endpoint: POST /resetpassword
+Rate Limit: 5 req/min
+Request Body:
+
+{
+  "email": "user@example.com"
+}
+1.4 POST - Change Reset Password
+Endpoint: POST /changeresetpassword
+Rate Limit: 5 req/min
+Request Body:
+
+{
+  "email": "user@example.com",
+  "token": "reset_token",
+  "password": "newpassword123",
+  "password_confirmation": "newpassword123"
+}
+1.5 POST - Biometric Login
+Endpoint: POST /biologin
+Rate Limit: 5 req/min
+Request Body:
+
+{
+  "email": "user@example.com",
+  "biometric_token": "biometric_token_here"
+}
+1.6 POST - Enable Biometric
+Endpoint: POST /enablebiometric
+Auth Required: Yes
+Request Body:
+
+{
+  "biometric_token": "biometric_token_here"
+}
+1.7 GET - Logout
+Endpoint: GET /logout
+Auth Required: Yes
+1.8 POST - Refresh Token
+Endpoint: POST /refresh
+Auth Required: Yes
+Request Body:
+
+{
+  "refresh_token": "refresh_token_here"
+}
+1.9 POST - Reconfirm Account
+Endpoint: POST /reconfirm-account
+Rate Limit: 20 req/min
+Request Body:
+
+{
+  "email": "user@example.com"
+}
+📁 2. Public/General Routes
+2.1 GET - Country List
+Endpoint: GET /country
+Rate Limit: 20 req/min
+2.2 GET - OS Version
+Endpoint: GET /osversion
+Rate Limit: 20 req/min
+2.3 ANY - Market Data
+Endpoint: ANY /market
+Rate Limit: 20 req/min
+2.4 GET - Authenticated User
+Endpoint: GET /user
+Auth Required: Yes
+📁 3. User Management Module
+3.1 POST - Change Password
+Endpoint: POST /change-password
+Auth Required: Yes
+Rate Limit: 3 req/min
+Request Body:
+
+{
+  "current_password": "oldpassword123",
+  "new_password": "newpassword123",
+  "new_password_confirmation": "newpassword123"
+}
+3.2 POST - Deactivate Account
+Endpoint: POST /deactivateaccount
+Auth Required: Yes
+Rate Limit: 3 req/min
+Request Body:
+
+{
+  "reason": "Reason for deactivation"
+}
+3.3 GET - Deactivate Account (Alternative)
+Endpoint: GET /deactivateAccount
+Auth Required: Yes
+3.4 POST - Enable Two-Factor Authentication
+Endpoint: POST /enable-twofa
+Auth Required: Yes
+Rate Limit: 3 req/min
+Request Body:
+
+{
+  "google2fa_secret": "secret_key"
+}
+3.5 POST - Disable Two-Factor Authentication
+Endpoint: POST /disable-twofa
+Auth Required: Yes
+Rate Limit: 3 req/min
+Request Body:
+
+{
+  "otp": "123456"
+}
+3.6 POST - Validate OTP
+Endpoint: POST /validate-otp
+Auth Required: Yes
+Rate Limit: 10 req/min
+Request Body:
+
+{
+  "otp": "123456"
+}
+3.7 POST - Resend Email
+Endpoint: POST /resend-email
+Auth Required: Yes
+Rate Limit: 10 req/min
+Request Body:
+
+{
+  "email": "user@example.com"
+}
+3.8 POST - Send OTP
+Endpoint: POST /send-otp
+Auth Required: Yes
+Rate Limit: 10 req/min
+Request Body:
+
+{
+  "phone": "+1234567890"
+}
+3.9 POST - Verify OTP
+Endpoint: POST /verify-otp
+Auth Required: Yes
+Rate Limit: 10 req/min
+Request Body:
+
+{
+  "otp": "123456",
+  "phone": "+1234567890"
+}
+3.10 POST - User Details
+Endpoint: POST /userdetails
+Auth Required: Yes
+Request Body:
+
+{}
+3.11 POST - Update User Details
+Endpoint: POST /userdetails-update
+Auth Required: Yes
+Request Body:
+
+{
+  "first_name": "John",
+  "last_name": "Doe",
+  "phone": "+1234567890",
+  "address": "123 Main St",
+  "city": "New York",
+  "state": "NY",
+  "zipcode": "10001"
+}
+📁 4. KYC (Know Your Customer) Module
+4.1 POST - Add KYC
+Endpoint: POST /add-kyc
+Auth Required: Yes
+Rate Limit: 3 req/min
+Request Body:
+
+{
+  "id_type": "passport",
+  "id_number": "ABC123456",
+  "country": "US",
+  "date_of_birth": "1990-01-01"
+}
+4.2 POST - Update KYC
+Endpoint: POST /update-kyc
+Auth Required: Yes
+Rate Limit: 3 req/min
+Request Body:
+
+{
+  "id_type": "passport",
+  "id_number": "ABC123456",
+  "country": "US",
+  "date_of_birth": "1990-01-01"
+}
+4.3 POST - Upload Front ID
+Endpoint: POST /front-upload
+Auth Required: Yes
+Rate Limit: 10 req/min
+Request Body (multipart/form-data):
+
+{
+  "front_image": "file"
+}
+4.4 POST - Upload Back ID
+Endpoint: POST /back-upload
+Auth Required: Yes
+Rate Limit: 10 req/min
+Request Body (multipart/form-data):
+
+{
+  "back_image": "file"
+}
+4.5 POST - Upload Proof of Address
+Endpoint: POST /proof-upload
+Auth Required: Yes
+Rate Limit: 10 req/min
+Request Body (multipart/form-data):
+
+{
+  "proof_image": "file"
+}
+4.6 POST - Upload Profile Image
+Endpoint: POST /profile-upload
+Auth Required: Yes
+Rate Limit: 10 req/min
+Request Body (multipart/form-data):
+
+{
+  "profile_image": "file"
+}
+📁 5. Bank Management Module
+5.1 POST - Add Bank
+Endpoint: POST /add-bank
+Auth Required: Yes
+Rate Limit: 10 req/min
+Request Body:
+
+{
+  "bank_name": "Bank of America",
+  "account_holder_name": "John Doe",
+  "account_number": "1234567890",
+  "ifsc_code": "BOFAUS3N",
+  "swift_code": "BOFAUS3NXXX",
+  "bank_address": "123 Bank St, New York, NY"
+}
+5.2 POST - Update Bank
+Endpoint: POST /update-bank
+Auth Required: Yes
+Rate Limit: 10 req/min
+Request Body:
+
+{
+  "bank_id": 1,
+  "bank_name": "Bank of America",
+  "account_holder_name": "John Doe",
+  "account_number": "1234567890",
+  "ifsc_code": "BOFAUS3N",
+  "swift_code": "BOFAUS3NXXX"
+}
+5.3 POST - Delete Bank
+Endpoint: POST /delete-bank
+Auth Required: Yes
+Rate Limit: 10 req/min
+Request Body:
+
+{
+  "bank_id": 1
+}
+5.4 POST - List Bank
+Endpoint: POST /list-bank
+Auth Required: Yes
+Request Body:
+
+{}
+📁 6. Wallet Management Module
+6.1 POST - Admin Bank (Fiat Deposit)
+Endpoint: POST /adminBank
+Auth Required: Yes
+Request Body:
+
+{
+  "currency": "USD"
+}
+6.2 POST - Fiat Deposit
+Endpoint: POST /fiatdeposit
+Auth Required: Yes
+Request Body:
+
+{
+  "currency": "USD",
+  "amount": 1000,
+  "payment_method": "bank_transfer",
+  "transaction_id": "TXN123456"
+}
+6.3 POST - Crypto Withdraw (Validate)
+Endpoint: POST /withdraw
+Auth Required: Yes
+Request Body:
+
+{
+  "currency": "BTC",
+  "amount": 0.5,
+  "address": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
+  "tag": ""
+}
+6.4 POST - Withdraw OTP
+Endpoint: POST /withdrawotp
+Auth Required: Yes
+Request Body:
+
+{
+  "otp": "123456",
+  "withdraw_id": 1
+}
+6.5 POST - Generate Deposit Address
+Endpoint: POST /wallet/generate-address
+Auth Required: Yes
+Request Body:
+
+{
+  "currency": "BTC"
+}
+📁 7. Trading Module
+7.1 ANY - Get List Assets
+Endpoint: ANY /getlistassets
+Auth Required: Yes
+7.2 ANY - Assets List
+Endpoint: ANY /assets
+Auth Required: Yes
+7.3 ANY - Asset Details
+Endpoint: ANY /assetsdetails
+Auth Required: Yes
+7.4 POST - Trade Pair List
+Endpoint: POST /tradepairlist
+Auth Required: Yes
+Request Body:
+
+{}
+7.5 POST - Trade
+Endpoint: POST /trade
+Auth Required: Yes
+Request Body:
+
+{
+  "pair": "BTC_USDT"
+}
+7.6 POST - Post Trade
+Endpoint: POST /posttrade
+Auth Required: Yes
+Request Body:
+
+{
+  "pair": "BTC_USDT",
+  "type": "buy",
+  "order_type": "limit",
+  "price": 50000,
+  "amount": 0.1
+}
+7.7 POST - Open Orders
+Endpoint: POST /openorders
+Auth Required: Yes
+Request Body:
+
+{
+  "pair": "BTC_USDT"
+}
+7.8 POST - Cancel Order
+Endpoint: POST /cancelorder
+Auth Required: Yes
+Request Body:
+
+{
+  "order_id": 12345
+}
+📁 8. Limit Trading Module
+8.1 POST - Buy Limit Trade
+Endpoint: POST /buylimittrade
+Auth Required: Yes
+Request Body:
+
+{
+  "pair": "BTC_USDT",
+  "price": 50000,
+  "amount": 0.1
+}
+8.2 POST - Sell Limit Trade
+Endpoint: POST /selllimittrade
+Auth Required: Yes
+Request Body:
+
+{
+  "pair": "BTC_USDT",
+  "price": 50000,
+  "amount": 0.1
+}
+📁 9. Market Trading Module
+9.1 POST - Buy Market
+Endpoint: POST /trade/buymarket
+Auth Required: Yes
+Request Body:
+
+{
+  "pair": "BTC_USDT",
+  "amount": 0.1
+}
+9.2 POST - Sell Market
+Endpoint: POST /trade/sellmarket
+Auth Required: Yes
+Request Body:
+
+{
+  "pair": "BTC_USDT",
+  "amount": 0.1
+}
+📁 10. History Module
+10.1 POST - Trade History
+Endpoint: POST /tradehistory
+Auth Required: Yes
+Request Body:
+
+{
+  "pair": "BTC_USDT",
+  "limit": 50,
+  "offset": 0
+}
+10.2 POST - Withdraw History
+Endpoint: POST /withdrawhistory
+Auth Required: Yes
+Request Body:
+
+{
+  "currency": "BTC",
+  "limit": 50,
+  "offset": 0
+}
+10.3 POST - Deposit History
+Endpoint: POST /deposithistory
+Auth Required: Yes
+Request Body:
+
+{
+  "currency": "BTC",
+  "limit": 50,
+  "offset": 0
+}
+10.4 POST - Deposit List
+Endpoint: POST /depositlist
+Auth Required: Yes
+Request Body:
+
+{
+  "limit": 50,
+  "offset": 0
+}
+10.5 POST - Withdraw List
+Endpoint: POST /withdrawlist
+Auth Required: Yes
+Request Body:
+
+{
+  "limit": 50,
+  "offset": 0
+}
+📁 11. Support Ticket Module
+11.1 POST - View Support Tickets
+Endpoint: POST /ticket-view
+Auth Required: Yes
+Request Body:
+
+{}
+11.2 POST - Create Ticket
+Endpoint: POST /create-ticket
+Auth Required: Yes
+Request Body:
+
+{
+  "subject": "Issue with withdrawal",
+  "category": "withdrawal",
+  "priority": "high",
+  "message": "I cannot withdraw my funds"
+}
+11.3 POST - Get Messages
+Endpoint: POST /get-message
+Auth Required: Yes
+Request Body:
+
+{
+  "ticket_id": 123
+}
+11.4 POST - Send Message
+Endpoint: POST /send-message
+Auth Required: Yes
+Request Body:
+
+{
+  "ticket_id": 123,
+  "message": "This is my reply"
+}
+📁 12. Live Chat Module
+12.1 POST - Start Chat
+Endpoint: POST /live-chat/start
+Auth Required: Yes
+Request Body:
+
+{
+  "subject": "Need help with trading"
+}
+12.2 POST - Send Chat Message
+Endpoint: POST /live-chat/{chatId}/send-message
+Auth Required: Yes
+Request Body:
+
+{
+  "message": "Hello, I need assistance"
+}
+12.3 GET - Get Chat Messages
+Endpoint: GET /live-chat/{chatId}/messages
+Auth Required: Yes
+12.4 POST - End Chat
+Endpoint: POST /live-chat/{chatId}/end
+Auth Required: Yes
+Request Body:
+
+{}
+12.5 POST - Request Agent
+Endpoint: POST /live-chat/{chatId}/request-agent
+Auth Required: Yes
+Request Body:
+
+{}
+12.6 POST - Create Ticket from Chat
+Endpoint: POST /live-chat/{chatId}/create-ticket
+Auth Required: Yes
+Request Body:
+
+{
+  "subject": "Issue from chat"
+}
+12.7 GET - Admin Status
+Endpoint: GET /live-chat/admin-status
+Auth Required: Yes
+12.8 GET - Get Chat by Session
+Endpoint: GET /live-chat/session/{sessionId}
+Auth Required: Yes
+📁 13. Launchpad/IEO Module
+13.1 GET - View Launchpad
+Endpoint: GET /launchpad
+Auth Required: Yes
+13.2 GET - Token Sale
+Endpoint: GET /tokensale
+Auth Required: Yes
+13.3 POST - Buy Token
+Endpoint: POST /buytoken
+Auth Required: Yes
+Request Body:
+
+{
+  "token_id": 1,
+  "amount": 1000,
+  "payment_currency": "USDT"
+}
+13.4 POST - Apply for Launchpad
+Endpoint: POST /applylaunchpad
+Auth Required: Yes
+Request Body:
+
+{
+  "project_name": "MyToken",
+  "token_symbol": "MTK",
+  "total_supply": 1000000,
+  "description": "My awesome token project",
+  "whitepaper_url": "https://example.com/whitepaper.pdf"
+}
+13.5 POST - Buy IEO
+Endpoint: POST /buyieo
+Auth Required: Yes
+Request Body:
+
+{
+  "ieo_id": 1,
+  "amount": 1000,
+  "payment_currency": "USDT"
+}
+📁 14. Swap Module (Old)
+14.1 POST - Swap List
+Endpoint: POST /swaplist
+Auth Required: Yes
+Request Body:
+
+{}
+14.2 POST - Swap Submit
+Endpoint: POST /swapsubmit
+Auth Required: Yes
+Request Body:
+
+{
+  "from_currency": "BTC",
+  "to_currency": "ETH",
+  "amount": 0.5
+}
+14.3 POST - Swap History
+Endpoint: POST /swap-history
+Auth Required: Yes
+Request Body:
+
+{
+  "limit": 50,
+  "offset": 0
+}
+📁 15. Instant Buy/Sell Module (New)
+15.1 POST - Buy Crypto List
+Endpoint: POST /buycrypto-list
+Auth Required: Yes
+Request Body:
+
+{}
+15.2 POST - List Coin (Pair List)
+Endpoint: POST /listcoin
+Auth Required: Yes
+Request Body:
+
+{}
+15.3 POST - Get Balance
+Endpoint: POST /getbalance
+Auth Required: Yes
+Request Body:
+
+{
+  "currency": "BTC"
+}
+15.4 POST - Instant Submit
+Endpoint: POST /instantsubmit
+Auth Required: Yes
+Request Body:
+
+{
+  "from_currency": "USD",
+  "to_currency": "BTC",
+  "amount": 1000
+}
+15.5 POST - Buy Crypto History
+Endpoint: POST /buycrypto-history
+Auth Required: Yes
+Request Body:
+
+{
+  "limit": 50,
+  "offset": 0
+}
+📁 16. Staking Module
+16.1 POST - Stake List
+Endpoint: POST /stakelist
+Auth Required: Yes
+Request Body:
+
+{}
+16.2 POST - Earnings
+Endpoint: POST /earnings
+Auth Required: Yes
+Request Body:
+
+{}
+16.3 POST - Earning History
+Endpoint: POST /earninghistory
+Auth Required: Yes
+Request Body:
+
+{
+  "limit": 50,
+  "offset": 0
+}
+16.4 POST - Stack Submit (Create Stake)
+Endpoint: POST /stacksubmit
+Auth Required: Yes
+Request Body:
+
+{
+  "currency": "BTC",
+  "amount": 0.5,
+  "duration": 30
+}
+16.5 POST - Stake Withdraw
+Endpoint: POST /stakewithdraw
+Auth Required: Yes
+Request Body:
+
+{
+  "stake_id": 123
+}
+16.6 POST - Referral Info
+Endpoint: POST /referralinfo
+Auth Required: Yes
+Request Body:
+
+{}
+16.7 POST - My Stake
+Endpoint: POST /mystake
+Auth Required: Yes
+Request Body:
+
+{}
+📁 17. Payment Gateway Module
+17.1 POST - Payment Request
+Endpoint: POST /paymentRequest
+Auth Required: Yes
+Request Body:
+
+{
+  "amount": 1000,
+  "currency": "USD",
+  "payment_method": "paytech"
+}
+17.2 ANY - IPN (Webhook)
+Endpoint: ANY /ipn/{id?}
+Auth Required: No
+Note: This is a webhook endpoint for payment gateway callbacks
+17.3 GET - Cancel Payment
+Endpoint: GET /cancel-payment/{id?}
+Auth Required: No
+17.4 GET - Success Payment
+Endpoint: GET /success-payment/{id?}
+Auth Required: No
